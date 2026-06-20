@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidRead - Adventure 3: Dino Land!</title>
+  <!-- Link to the shared CSS containing font-family: var(--cds-font-sans) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Header (Matching style, keeping Adventure 1 and 2 links as requested) -->
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="logo.png" alt="KidRead Logo" class="logo-img">
+      <h1 class="logo-text">Kid<span>Read</span></h1>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html">Adventure 1</a></li>
+        <li><a href="page2.html">Adventure 2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Back to Home link -->
+    <a href="index.html" class="back-btn">&larr; Back to Home</a>
+
+    <!-- Fun Learning Article -->
+    <article class="article">
+      <h2>🦕 Adventure 3: Dino Land!</h2>
+      <p>Millions of years ago, before humans ever walked the Earth, giant creatures called dinosaurs ruled the land. Let's travel back in time to meet them!</p>
+      
+      <!-- Sub-section answering Question 1 -->
+      <h3>What Happened to the Dinosaurs?</h3>
+      <p>Dinosaurs walked, swam, and flew all over the world for a very long time. But about 66 million years ago, a giant rock from space hit the Earth, changing the weather. Because of this, dinosaurs became <span class="vocab-word" title="Extinct: When a group of living things completely dies out and none are left alive.">extinct</span>. This means they all died out, and there are no dinosaurs alive today!</p>
+      
+      <div class="highlight-box">
+        <p><strong>Did you know?</strong> Not all dinosaurs were giant! Some dinosaurs, like the Microraptor, were as small as a modern crow and had feathers just like birds!</p>
+      </div>
+
+      <!-- Sub-section answering Question 2 -->
+      <h3>How Do We Know They Existed?</h3>
+      <p>Since no human ever saw a living dinosaur, how do we know so much about them? We know because scientists find <span class="vocab-word" title="Fossils: The hardened remains or shapes of ancient plants and animals preserved in rock.">fossils</span> in the ground! Fossils are ancient bones, teeth, leaf prints, or even footprints that have turned into rock over millions of years. By studying them, we can tell how big the dinosaurs were and what they liked to eat!</p>
+
+      <p>So, grab your explorer's shovel and magnifying glass, and keep searching for secrets of the past! 🔍</p>
+
+      <!-- Assessing understanding section -->
+      <section class="quiz-section">
+        <h3>🧠 Fun Dinosaur Quiz!</h3>
+        
+        <!-- Question 1 -->
+        <div class="quiz-card">
+          <p class="quiz-question">1. What does it mean when we say dinosaurs are extinct?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans1', this)">Show Answer 💡</button>
+          <div id="ans1" class="quiz-answer">
+            ☄️ It means that the entire group of animals died out, and there are none of them left alive on Earth today.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-card">
+          <p class="quiz-question">2. How do we know dinosaurs existed if no human ever saw one?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans2', this)">Show Answer 💡</button>
+          <div id="ans2" class="quiz-answer">
+            🦴 Because we find <strong>fossils</strong> (ancient bones, teeth, and footprints turned to stone) hidden in the ground!
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    function toggleAnswer(id, btn) {
+      const answer = document.getElementById(id);
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        btn.textContent = 'Show Answer 💡';
+      } else {
+        answer.classList.add('show');
+        btn.textContent = 'Hide Answer 🙈';
+      }
+    }
+  </script>
+
+  <!-- App Footer -->
+  <footer>
+    <p>&copy; 2026 <span>KidRead</span>. Designed with &hearts; for curious young minds.</p>
+  </footer>
+
+</body>
+</html>

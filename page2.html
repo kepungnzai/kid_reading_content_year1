@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidRead - The Magic of Oceans!</title>
+  <!-- Link to the shared CSS containing font-family: var(--cds-font-sans) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="logo.png" alt="KidRead Logo" class="logo-img">
+      <h1 class="logo-text">Kid<span>Read</span></h1>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html">Adventure 1</a></li>
+        <li><a href="page2.html" class="active">Adventure 2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Back to Home link -->
+    <a href="index.html" class="back-btn">&larr; Back to Home</a>
+
+    <!-- Fun Learning Article -->
+    <article class="article">
+      <h2>🌊 The Magic of Oceans!</h2>
+      <p>Covering more than half of our planet, the oceans are full of mystery, beautiful colors, and amazing creatures. Let's dive in and explore!</p>
+      
+      <!-- Sub-section answering Question 1 -->
+      <h3>Why is the Ocean Blue?</h3>
+      <p>When you fill a glass with tap water, it looks clear. So why does the ocean look so blue? Sunlight has all colors of the rainbow. When sunlight hits the water, the water <span class="vocab-word" title="Absorbs: Takes in or drinks up light, heat, or water (like a sponge)!">absorbs</span> the red, orange, and yellow parts of the light, leaving only the beautiful blue light to bounce back to our eyes!</p>
+      
+      <div class="highlight-box">
+        <p><strong>Did you know?</strong> The deepest place in the ocean is called the Mariana Trench. It is so deep that you could fit the tallest mountain in the world inside it, and it would still be covered in water!</p>
+      </div>
+
+      <!-- Sub-section answering Question 2 -->
+      <h3>How Do Fish Breathe?</h3>
+      <p>People need to breathe air using their lungs, but fish live underwater their whole life! How do they do it? Fish have a special superpower: instead of lungs, they use <span class="vocab-word" title="Gills: Special feather-like body parts on the sides of a fish's head that pull oxygen out of water.">gills</span>. Gills act like small filters on the sides of their heads. As water flows through them, the gills pull oxygen out of the water so the fish can breathe easily!</p>
+
+      <p>So, splash into your wetsuit, grab your snorkel, and keep exploring our blue planet! 🐠</p>
+
+      <!-- Assessing understanding section -->
+      <section class="quiz-section">
+        <h3>🧠 Fun Ocean Quiz!</h3>
+        
+        <!-- Question 1 -->
+        <div class="quiz-card">
+          <p class="quiz-question">1. Why does the ocean water look blue to our eyes?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans1', this)">Show Answer 💡</button>
+          <div id="ans1" class="quiz-answer">
+            🌈 Because ocean water <strong>absorbs</strong> the red, orange, and yellow parts of sunlight, leaving only the blue light to reflect back to us!
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-card">
+          <p class="quiz-question">2. What special body part do fish use to breathe underwater?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans2', this)">Show Answer 💡</button>
+          <div id="ans2" class="quiz-answer">
+            🐟 Fish use their <strong>gills</strong> (special filters on the sides of their heads) to breathe oxygen directly from the water!
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    function toggleAnswer(id, btn) {
+      const answer = document.getElementById(id);
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        btn.textContent = 'Show Answer 💡';
+      } else {
+        answer.classList.add('show');
+        btn.textContent = 'Hide Answer 🙈';
+      }
+    }
+  </script>
+
+  <!-- App Footer -->
+  <footer>
+    <p>&copy; 2026 <span>KidRead</span>. Designed with &hearts; for curious young minds.</p>
+  </footer>
+
+</body>
+</html>

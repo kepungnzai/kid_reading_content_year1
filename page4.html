@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidRead - Adventure 4: Volcano Power!</title>
+  <!-- Link to the shared CSS containing font-family: var(--cds-font-sans) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Header (Matching style, keeping Adventure 1 and 2 links as requested) -->
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="logo.png" alt="KidRead Logo" class="logo-img">
+      <h1 class="logo-text">Kid<span>Read</span></h1>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html">Adventure 1</a></li>
+        <li><a href="page2.html">Adventure 2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Back to Home link -->
+    <a href="index.html" class="back-btn">&larr; Back to Home</a>
+
+    <!-- Fun Learning Article -->
+    <article class="article">
+      <h2>🌋 Adventure 4: Volcano Power!</h2>
+      <p>Volcanoes are some of the most exciting, fiery, and powerful things on Earth! Let's explore how these smoky mountains work.</p>
+      
+      <!-- Sub-section answering Question 1 -->
+      <h3>What is a Volcano?</h3>
+      <p>A volcano is a mountain that opens downward to a pool of hot, melted rock below the Earth's surface. When this hot liquid rock is still trapped deep underground, it is called <span class="vocab-word" title="Magma: Super hot, melted liquid rock trapped deep inside the Earth.">magma</span>. When the volcano erupts, the magma pushes its way up and escapes to the outside, where we call it lava!</p>
+      
+      <div class="highlight-box">
+        <p><strong>Did you know?</strong> Lava is extremely hot! It can reach temperatures over 2,000 degrees Fahrenheit (1,000 degrees Celsius) &mdash; that is ten times hotter than boiling water!</p>
+      </div>
+
+      <!-- Sub-section answering Question 2 -->
+      <h3>Why Do Volcanoes Erupt?</h3>
+      <p>Inside the Earth, it is very hot. Melted rock and gases mix together. As more gas bubbles form, they get trapped and build up a lot of <span class="vocab-word" title="Pressure: The force created when things are pushed or squeezed tightly together.">pressure</span>. Think of it like shaking a big bottle of fizzy soda &mdash; if you shake it enough, the pressure builds up and the cap blasts off in a giant spray!</p>
+
+      <p>So, steer clear of the bubbling lava, grab your safety goggles, and keep exploring our dynamic planet! 🗺️</p>
+
+      <!-- Assessing understanding section -->
+      <section class="quiz-section">
+        <h3>🧠 Fun Volcano Quiz!</h3>
+        
+        <!-- Question 1 -->
+        <div class="quiz-card">
+          <p class="quiz-question">1. What is the hot liquid rock called when it is still trapped inside the Earth?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans1', this)">Show Answer 💡</button>
+          <div id="ans1" class="quiz-answer">
+            🔥 It is called <strong>magma</strong>! Once it blasts out of the volcano into the open air, its name changes to <strong>lava</strong>.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-card">
+          <p class="quiz-question">2. What builds up inside the volcano that causes it to explode?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans2', this)">Show Answer 💡</button>
+          <div id="ans2" class="quiz-answer">
+            💥 Hot gases and <strong>pressure</strong> build up tightly inside, just like shaking a fizzy soda bottle until it bursts open!
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    function toggleAnswer(id, btn) {
+      const answer = document.getElementById(id);
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        btn.textContent = 'Show Answer 💡';
+      } else {
+        answer.classList.add('show');
+        btn.textContent = 'Hide Answer 🙈';
+      }
+    }
+  </script>
+
+  <!-- App Footer -->
+  <footer>
+    <p>&copy; 2026 <span>KidRead</span>. Designed with &hearts; for curious young minds.</p>
+  </footer>
+
+</body>
+</html>

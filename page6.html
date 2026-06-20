@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidRead - Adventure 6: The Rainbow Makers!</title>
+  <!-- Link to the shared CSS containing font-family: var(--cds-font-sans) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="logo.png" alt="KidRead Logo" class="logo-img">
+      <h1 class="logo-text">Kid<span>Read</span></h1>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html">Adventure 1</a></li>
+        <li><a href="page2.html">Adventure 2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Back to Home link -->
+    <a href="index.html" class="back-btn">&larr; Back to Home</a>
+
+    <!-- Fun Learning Article -->
+    <article class="article">
+      <h2>🌈 Adventure 6: The Rainbow Makers!</h2>
+      <p>Rainbows are like colorful bridges across the sky. But they aren't magic &mdash; they are made of science! Let's find out how sun and water work together.</p>
+      
+      <!-- Sub-section answering Question 1 -->
+      <h3>First, We Need Water!</h3>
+      <p>Before a rainbow can form, there must be a lot of water in the sky. This can happen right after it rains, or near a splashing waterfall. The amount of tiny water droplets floating in the air is called <span class="vocab-word" title="Moisture: Small droplets of water present in the air or on a surface (like fog or dew).">moisture</span>. When the sun shines through this moisture, the rainbow adventure begins!</p>
+      
+      <div class="highlight-box">
+        <p><strong>Did you know?</strong> A rainbow is actually a full circle! When you stand on the ground, the Earth blocks the bottom half, so we only see an arch. If you fly high in an airplane, you might see a complete circular rainbow!</p>
+      </div>
+
+      <!-- Sub-section answering Question 2 -->
+      <h3>Bending the Light</h3>
+      <p>Sunlight looks white, but it actually holds all the colors of the rainbow mixed together. As sunlight passes into a floating raindrop, the water bends the light. This bending is called <span class="vocab-word" title="Refraction: The bending of light as it passes through water or glass, splitting it into different colors.">refraction</span>. The bent light splits up into red, orange, yellow, green, blue, indigo, and violet, and bounces back to our eyes!</p>
+
+      <p>So, keep your eyes open after the next rain shower, and enjoy the science in the sky! 🌦️</p>
+
+      <!-- Assessing understanding section -->
+      <section class="quiz-section">
+        <h3>🧠 Fun Rainbow Quiz!</h3>
+        
+        <!-- Question 1 -->
+        <div class="quiz-card">
+          <p class="quiz-question">1. What does the air need to have for a rainbow to form?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans1', this)">Show Answer 💡</button>
+          <div id="ans1" class="quiz-answer">
+            💧 The air needs <strong>moisture</strong>, which means lots of tiny water droplets floating in the air from rain or mist!
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-card">
+          <p class="quiz-question">2. What happens to sunlight when it passes through raindrops to show different colors?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans2', this)">Show Answer 💡</button>
+          <div id="ans2" class="quiz-answer">
+            📐 The light bends, which is called <strong>refraction</strong>. Bending splits the white light into all the colors of the rainbow!
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    function toggleAnswer(id, btn) {
+      const answer = document.getElementById(id);
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        btn.textContent = 'Show Answer 💡';
+      } else {
+        answer.classList.add('show');
+        btn.textContent = 'Hide Answer 🙈';
+      }
+    }
+  </script>
+
+  <!-- App Footer -->
+  <footer>
+    <p>&copy; 2026 <span>KidRead</span>. Designed with &hearts; for curious young minds.</p>
+  </footer>
+
+</body>
+</html>

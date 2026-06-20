@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidRead - Adventure 7: How Raindrops Form!</title>
+  <!-- Link to the shared CSS containing font-family: var(--cds-font-sans) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="logo.png" alt="KidRead Logo" class="logo-img">
+      <h1 class="logo-text">Kid<span>Read</span></h1>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html">Adventure 1</a></li>
+        <li><a href="page2.html">Adventure 2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Back to Home link -->
+    <a href="index.html" class="back-btn">&larr; Back to Home</a>
+
+    <!-- Fun Learning Article -->
+    <article class="article">
+      <h2>🌧️ Adventure 7: How Raindrops Form!</h2>
+      <p>Have you ever jumped in a rain puddle and wondered where all that water comes from? Let's trace the water cycle journey up to the clouds and back!</p>
+      
+      <!-- Sub-section answering Question 1 -->
+      <h3>Going Up to the Sky!</h3>
+      <p>When the sun shines down on puddles, lakes, and oceans, it heats the water up. As the water gets warm, it turns into an invisible gas called water vapor and rises up into the sky. This process is when water <span class="vocab-word" title="Evaporates: Turns from liquid water into an invisible gas (water vapor) when heated by the sun.">evaporates</span>. It's like the water is taking a secret invisible elevator ride into the sky!</p>
+      
+      <div class="highlight-box">
+        <p><strong>Did you know?</strong> An average white, fluffy cloud weighs about 1.1 million pounds (500,000 kilograms)! That's as heavy as 100 giant elephants floating in the air!</p>
+      </div>
+
+      <!-- Sub-section answering Question 2 -->
+      <h3>Making Clouds and Rain</h3>
+      <p>High up in the sky, it is very cold. The warm water vapor cools down and turns back into tiny liquid water droplets. This process is called <span class="vocab-word" title="Condensation: The cooling down of water gas (vapor) that turns it back into liquid water droplets (forming clouds).">condensation</span>. Millions of these tiny droplets stick together to form clouds. When the droplets get too big and heavy to stay in the air, they fall back down to Earth as rain!</p>
+
+      <p>So, next time it rains, remember that those raindrops were once part of a lake or ocean somewhere else! ☔</p>
+
+      <!-- Assessing understanding section -->
+      <section class="quiz-section">
+        <h3>🧠 Fun Rain Quiz!</h3>
+        
+        <!-- Question 1 -->
+        <div class="quiz-card">
+          <p class="quiz-question">1. What happens to puddle water when the sun heats it up?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans1', this)">Show Answer 💡</button>
+          <div id="ans1" class="quiz-answer">
+            ☀️ The water <strong>evaporates</strong>! It turns into an invisible gas called water vapor and rises high into the sky.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-card">
+          <p class="quiz-question">2. How do clouds form in the sky?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans2', this)">Show Answer 💡</button>
+          <div id="ans2" class="quiz-answer">
+            ☁️ Clouds form through <strong>condensation</strong>, where water gas cools down and turns back into tiny water droplets that gather together!
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    function toggleAnswer(id, btn) {
+      const answer = document.getElementById(id);
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        btn.textContent = 'Show Answer 💡';
+      } else {
+        answer.classList.add('show');
+        btn.textContent = 'Hide Answer 🙈';
+      }
+    }
+  </script>
+
+  <!-- App Footer -->
+  <footer>
+    <p>&copy; 2026 <span>KidRead</span>. Designed with &hearts; for curious young minds.</p>
+  </footer>
+
+</body>
+</html>
