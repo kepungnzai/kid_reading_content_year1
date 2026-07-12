@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidRead - Adventure 21: Your Superpower Mindset!</title>
+  <!-- Link to the shared CSS containing font-family: var(--cds-font-sans) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="logo.png" alt="KidRead Logo" class="logo-img">
+      <h1 class="logo-text">Kid<span>Read</span></h1>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html">Adventure 1</a></li>
+        <li><a href="page2.html">Adventure 2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Back to Home link -->
+    <a href="index.html" class="back-btn">&larr; Back to Home</a>
+
+    <!-- Fun Learning Article -->
+    <article class="article">
+      <h2>🧠 Adventure 21: Your Superpower Mindset!</h2>
+      <p>Did you know your brain is like a muscle? The more you train it with good habits, the stronger and happier you become! Let's discover three awesome ways to build a superpower mindset.</p>
+      
+      <!-- Topic 1: Staying Motivated -->
+      <h3>🚀 Staying Motivated - The Latest Trend!</h3>
+      <p>Motivation is the fire inside you that makes you want to learn, play, and grow! One of the coolest new ways kids stay motivated is by using a <span class="vocab-word" title="Growth mindset: Believing that you can get smarter and better at things by practicing and trying hard!">growth mindset</span>. Instead of saying "I can't do this," say "I can't do this YET!" Set small, fun goals like reading one page a day or saving one sticker for each homework finished. Every time you reach a goal, celebrate — even a tiny win is a big step forward! Keeping a "brag folder" of your best work or a journal of things you learned also helps you see how far you've come. Remember, even champions started as beginners!</p>
+
+      <div class="highlight-box">
+        <p><strong>Did you know?</strong> Scientists say writing down three things you are grateful for every day can make you happier and more motivated! Try it tonight before you sleep.</p>
+      </div>
+
+      <!-- Topic 2: Handling Pressure -->
+      <h3>😰 Handling Pressure Like a Superhero!</h3>
+      <p>Pressure is that tight feeling you get before a big test, a sports game, or when you have to speak in front of class. It's totally normal! The trick is to <span class="vocab-word" title="Resilience: The superpower to bounce back quickly when things get tough or don't go your way!">bounce back</span> like a superhero. When you feel pressure, take four slow, deep belly breaths — breathe in like you're smelling a flower, and breathe out like you're blowing a candle. Imagine the pressure floating away like a cloud. Break big scary tasks into tiny bite-sized pieces, and focus only on the very next step, not the whole mountain. Talk to a friend, parent, or teacher about how you feel — sharing pressure makes it shrink in half! And remember: doing your best is always enough, even if it's not perfect.</p>
+
+      <!-- Topic 3: Being Positive -->
+      <h3>🌈 Be Positive - Your Superpower!</h3>
+      <p>Being positive doesn't mean pretending everything is perfect. It means finding a little light even on cloudy days. Your brain has a special skill called <span class="vocab-word" title="Optimism: The habit of looking for the good side of things and believing things can get better!">optimism</span>. When something goes wrong, ask yourself: "What can I learn from this?" or "What is one good thing about today?" Try playing the "Positive Detective" game — find one good thing in every situation, like "I fell down, but now I know to watch the step!" Smiling, even when you don't feel like it, actually tricks your brain into feeling happier. Share kind words with your friends and family — kindness spreads positivity like ripples in a pond. When you fill your mind with positive thoughts, there's less room for worry!</p>
+
+      <p>You already have everything you need to be motivated, handle pressure, and stay positive. Your superpower mindset is waiting — just believe in yourself! 🌟</p>
+
+      <!-- Assessing understanding section -->
+      <section class="quiz-section">
+        <h3>🧠 Fun Superpower Quiz!</h3>
+        
+        <!-- Question 1 about Motivation -->
+        <div class="quiz-card">
+          <p class="quiz-question">1. What is one cool way to stay motivated using the latest trend?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans1', this)">Show Answer 💡</button>
+          <div id="ans1" class="quiz-answer">
+            🚀 Use a <strong>growth mindset</strong> — instead of "I can't do it," say "I can't do it YET!" Set small goals and celebrate every win. Keeping a brag folder or journal helps too!
+          </div>
+        </div>
+
+        <!-- Question 2 about Handling Pressure -->
+        <div class="quiz-card">
+          <p class="quiz-question">2. What is a good way to handle pressure when you feel nervous?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans2', this)">Show Answer 💡</button>
+          <div id="ans2" class="quiz-answer">
+            😌 Take four slow, deep belly breaths (smell the flower, blow the candle). Break big tasks into small pieces, talk to someone you trust, and remember doing your best is always enough!
+          </div>
+        </div>
+
+        <!-- Question 3 about Being Positive -->
+        <div class="quiz-card">
+          <p class="quiz-question">3. How can you train your brain to be more positive?</p>
+          <button class="btn-answer" onclick="toggleAnswer('ans3', this)">Show Answer 💡</button>
+          <div id="ans3" class="quiz-answer">
+            🌈 Play "Positive Detective" — find one good thing in every situation. Practice <strong>optimism</strong> by asking "What can I learn from this?" Smile, share kind words, and remember positivity spreads like ripples!
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    function toggleAnswer(id, btn) {
+      const answer = document.getElementById(id);
+      if (answer.classList.contains('show')) {
+        answer.classList.remove('show');
+        btn.textContent = 'Show Answer 💡';
+      } else {
+        answer.classList.add('show');
+        btn.textContent = 'Hide Answer 🙈';
+      }
+    }
+  </script>
+
+  <!-- App Footer -->
+  <footer>
+    <p>&copy; 2026 <span>KidRead</span>. Designed with &hearts; for curious young minds.</p>
+  </footer>
+
+</body>
+</html>
