@@ -6,6 +6,128 @@
   <title>KidRead - Adventure 21: Your Superpower Mindset!</title>
   <!-- Link to the shared CSS containing font-family: var(--cds-font-sans) -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Illustration styles for the Small Steps Mountain */
+    .steps-illustration {
+      background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
+      border-radius: var(--radius-lg);
+      padding: 2rem 2rem 1.5rem;
+      margin: 2.5rem 0;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 3px solid var(--color-primary-light);
+      overflow: hidden;
+    }
+
+    .steps-illustration svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .steps-caption {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .steps-caption .highlight {
+      background-color: var(--color-yellow);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-sm);
+      color: var(--color-text);
+    }
+
+    .step-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      fill: var(--color-text);
+    }
+
+    .step-circle {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .step-circle:nth-child(2) { animation-delay: 0.3s; }
+    .step-circle:nth-child(3) { animation-delay: 0.6s; }
+    .step-circle:nth-child(4) { animation-delay: 0.9s; }
+    .step-circle:nth-child(5) { animation-delay: 1.2s; }
+
+    @keyframes pulse {
+      0%, 100% { r: 18; opacity: 1; }
+      50% { r: 24; opacity: 0.7; }
+    }
+
+    .kid-character {
+      animation: bounce 3s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .mountain-snow {
+      animation: shimmer 4s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    .flag-wave {
+      animation: wave 2s ease-in-out infinite;
+      transform-origin: bottom center;
+    }
+
+    @keyframes wave {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+
+    .cloud-float {
+      animation: floatCloud 6s ease-in-out infinite;
+    }
+
+    .cloud-float:nth-child(2) {
+      animation-delay: 2s;
+    }
+
+    .cloud-float:nth-child(3) {
+      animation-delay: 4s;
+    }
+
+    @keyframes floatCloud {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(15px); }
+    }
+
+    .bird-fly {
+      animation: flyBird 8s linear infinite;
+    }
+
+    @keyframes flyBird {
+      0% { transform: translateX(-60px); }
+      100% { transform: translateX(calc(100% + 60px)); }
+    }
+
+    @media (max-width: 600px) {
+      .steps-illustration {
+        padding: 1.5rem 1rem 1rem;
+      }
+      .steps-caption {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -44,6 +166,131 @@
       <!-- Topic 2: Handling Pressure -->
       <h3>😰 Handling Pressure Like a Superhero!</h3>
       <p>Pressure is that tight feeling you get before a big test, a sports game, or when you have to speak in front of class. It's totally normal! The trick is to <span class="vocab-word" title="Resilience: The superpower to bounce back quickly when things get tough or don't go your way!">bounce back</span> like a superhero. When you feel pressure, take four slow, deep belly breaths — breathe in like you're smelling a flower, and breathe out like you're blowing a candle. Imagine the pressure floating away like a cloud. Break big scary tasks into tiny bite-sized pieces, and focus only on the very next step, not the whole mountain. Talk to a friend, parent, or teacher about how you feel — sharing pressure makes it shrink in half! And remember: doing your best is always enough, even if it's not perfect.</p>
+
+      <!-- 🏔️ Small Steps Mountain Illustration -->
+      <div class="steps-illustration">
+        <svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration showing small steps up a mountain">
+          
+          <!-- Sky background -->
+          <rect width="600" height="340" fill="#E3F2FD" rx="20" />
+          
+          <!-- Sun -->
+          <circle cx="520" cy="50" r="35" fill="#FFC107" opacity="0.9" />
+          <circle cx="520" cy="50" r="28" fill="#FFD54F" />
+          
+          <!-- Clouds -->
+          <g class="cloud-float">
+            <ellipse cx="100" cy="55" rx="40" ry="18" fill="white" opacity="0.8" />
+            <ellipse cx="130" cy="50" rx="30" ry="15" fill="white" opacity="0.9" />
+            <ellipse cx="80" cy="50" rx="25" ry="12" fill="white" opacity="0.85" />
+          </g>
+          <g class="cloud-float">
+            <ellipse cx="380" cy="70" rx="35" ry="15" fill="white" opacity="0.7" />
+            <ellipse cx="410" cy="65" rx="25" ry="12" fill="white" opacity="0.8" />
+          </g>
+          
+          <!-- Birds -->
+          <g class="bird-fly">
+            <path d="M0,40 Q10,30 20,40 Q30,30 40,40" stroke="#4A5568" stroke-width="2" fill="none" />
+          </g>
+          
+          <!-- Mountain (big goal) -->
+          <polygon points="300,60 100,280 500,280" fill="#8BC34A" stroke="#689F38" stroke-width="3" />
+          <!-- Mountain shadow side -->
+          <polygon points="300,60 300,280 500,280" fill="#7CB342" stroke="#689F38" stroke-width="3" />
+          <!-- Snow cap -->
+          <polygon points="300,60 270,100 330,100" fill="white" stroke="#E0E0E0" stroke-width="1" class="mountain-snow" />
+          <polygon points="300,60 285,85 315,85" fill="#FAFAFA" />
+          
+          <!-- Mountain trail (dotted path) -->
+          <path d="M160,280 Q200,240 220,220 Q240,200 260,180 Q280,160 300,140" 
+                stroke="#FF9800" stroke-width="3" stroke-dasharray="6,6" fill="none" opacity="0.6" />
+          
+          <!-- Small steps (stones) going up the mountain -->
+          <!-- Step 1 -->
+          <ellipse cx="170" cy="270" rx="22" ry="10" fill="#FF9800" opacity="0.8" />
+          <text x="170" y="274" text-anchor="middle" class="step-label" fill="white">1</text>
+          
+          <!-- Step 2 -->
+          <ellipse cx="210" cy="240" rx="22" ry="10" fill="#FF9800" opacity="0.8" />
+          <text x="210" y="244" text-anchor="middle" class="step-label" fill="white">2</text>
+          
+          <!-- Step 3 -->
+          <ellipse cx="245" cy="210" rx="22" ry="10" fill="#FF9800" opacity="0.8" />
+          <text x="245" y="214" text-anchor="middle" class="step-label" fill="white">3</text>
+          
+          <!-- Step 4 -->
+          <ellipse cx="275" cy="180" rx="22" ry="10" fill="#FF9800" opacity="0.8" />
+          <text x="275" y="184" text-anchor="middle" class="step-label" fill="white">4</text>
+          
+          <!-- Step 5 -->
+          <ellipse cx="300" cy="150" rx="22" ry="10" fill="#FF9800" opacity="0.8" />
+          <text x="300" y="154" text-anchor="middle" class="step-label" fill="white">5</text>
+          
+          <!-- Glowing circles on steps (pulse animation) -->
+          <circle cx="170" cy="270" r="18" fill="none" stroke="#FFC107" stroke-width="2" class="step-circle" opacity="0.6" />
+          <circle cx="210" cy="240" r="18" fill="none" stroke="#FFC107" stroke-width="2" class="step-circle" opacity="0.6" />
+          <circle cx="245" cy="210" r="18" fill="none" stroke="#FFC107" stroke-width="2" class="step-circle" opacity="0.6" />
+          <circle cx="275" cy="180" r="18" fill="none" stroke="#FFC107" stroke-width="2" class="step-circle" opacity="0.6" />
+          <circle cx="300" cy="150" r="18" fill="none" stroke="#FFC107" stroke-width="2" class="step-circle" opacity="0.6" />
+          
+          <!-- Flag at the top -->
+          <line x1="300" y1="60" x2="300" y2="30" stroke="#4A5568" stroke-width="3" />
+          <polygon points="300,30 340,40 300,50" fill="#FF5722" class="flag-wave" />
+          <text x="320" y="38" font-size="10" fill="white" font-weight="700">🏆</text>
+          
+          <!-- Ground / grass -->
+          <rect x="0" y="280" width="600" height="60" fill="#66BB6A" rx="0" />
+          <rect x="0" y="280" width="600" height="8" fill="#81C784" />
+          
+          <!-- Small grass tufts -->
+          <path d="M50,280 Q52,270 54,280" stroke="#43A047" stroke-width="2" fill="none" />
+          <path d="M120,280 Q122,272 124,280" stroke="#43A047" stroke-width="2" fill="none" />
+          <path d="M400,280 Q402,270 404,280" stroke="#43A047" stroke-width="2" fill="none" />
+          <path d="M450,280 Q452,273 454,280" stroke="#43A047" stroke-width="2" fill="none" />
+          
+          <!-- Kid character at the bottom looking at step 1 -->
+          <g class="kid-character">
+            <!-- Body -->
+            <circle cx="120" cy="258" r="12" fill="#FFCC80" /> <!-- head -->
+            <rect x="112" y="270" width="16" height="20" rx="4" fill="#1E88E5" /> <!-- body -->
+            <!-- Legs -->
+            <line x1="116" y1="290" x2="112" y2="300" stroke="#4A5568" stroke-width="3" stroke-linecap="round" />
+            <line x1="124" y1="290" x2="128" y2="300" stroke="#4A5568" stroke-width="3" stroke-linecap="round" />
+            <!-- Arms (pointing up toward step 1) -->
+            <line x1="128" y1="275" x2="145" y2="265" stroke="#FFCC80" stroke-width="3" stroke-linecap="round" />
+            <line x1="112" y1="275" x2="100" y2="268" stroke="#FFCC80" stroke-width="3" stroke-linecap="round" />
+            <!-- Eyes -->
+            <circle cx="116" cy="256" r="2" fill="#1A202C" />
+            <circle cx="124" cy="256" r="2" fill="#1A202C" />
+            <!-- Smile -->
+            <path d="M116,262 Q120,266 124,262" stroke="#1A202C" stroke-width="1.5" fill="none" />
+            <!-- Hair -->
+            <path d="M108,252 Q112,245 120,248 Q128,245 132,252" stroke="#5D4037" stroke-width="2.5" fill="none" />
+          </g>
+          
+          <!-- Speech bubble from kid -->
+          <rect x="60" y="220" width="100" height="28" rx="14" fill="white" stroke="#1E88E5" stroke-width="2" />
+          <polygon points="100,248 108,248 104,256" fill="white" />
+          <polygon points="100,248 108,248 104,254" fill="#1E88E5" />
+          <text x="110" y="239" text-anchor="middle" font-size="11" font-weight="700" fill="#1E88E5">Step 1 first! 🎯</text>
+          
+          <!-- "You are here" marker -->
+          <rect x="90" y="305" width="60" height="20" rx="10" fill="#FF5722" opacity="0.9" />
+          <text x="120" y="319" text-anchor="middle" font-size="10" font-weight="700" fill="white">You are here 🦸</text>
+          
+          <!-- Small steps label at bottom -->
+          <text x="300" y="330" text-anchor="middle" font-size="13" font-weight="700" fill="#2E7D32">
+            ⛰️ One small step at a time — you don't need to climb the whole mountain today!
+          </text>
+        </svg>
+        <div class="steps-caption">
+          <span>👣</span>
+          <span>Focus on</span>
+          <span class="highlight">just the next step</span>
+          <span>— not the whole mountain! 🏔️</span>
+        </div>
+      </div>
 
       <!-- Topic 3: Being Positive -->
       <h3>🌈 Be Positive - Your Superpower!</h3>
